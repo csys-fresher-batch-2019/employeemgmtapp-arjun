@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Scanner;
 
 import HRMS.EmployeerDetails.TestConnection;
+import HRMS.employeePerformance.employeePerformance;
+import HRMS.employeePerformance.employeePerformanceDAOImp;
 
 public class teamleaderlogindaoImp implements TeamLeaderLoginDAO {
 
@@ -24,6 +26,14 @@ public class teamleaderlogindaoImp implements TeamLeaderLoginDAO {
 			if (pass.equals(password)) {
 				System.out.println("Login success");
 //				TestEmployeePerformance.main();
+				employeePerformanceDAOImp ob=new employeePerformanceDAOImp();
+				employeePerformance ep=new employeePerformance();
+				System.out.println("Enter EmpId,TeamId,AppraisalCode,PerformanceRating : ");
+				ep.empId=s.nextInt();
+				ep.teamId=s.nextInt();
+				ep.appraisalCode=s.next();
+				ep.performanceRating=s.nextInt();
+				ob.add(ep);
 			} else {
 				System.out.println("Login failed");
 			}
@@ -36,11 +46,3 @@ public class teamleaderlogindaoImp implements TeamLeaderLoginDAO {
 	}
 }
 
-/*employeePerformanceDAOImp ob=new employeePerformanceDAOImp();
-employeePerformance ep=new employeePerformance();
-System.out.println("Enter EmpId,TeamId,AppraisalCode,PerformanceRating : ");
-ep.empId=s.nextInt();
-ep.teamId=s.nextInt();
-ep.appraisalCode=s.next();
-ep.performanceRating=s.nextInt();
-ob.add(ep);*/

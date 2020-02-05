@@ -5,12 +5,13 @@ import java.time.LocalDate;
 
 public class PostExperienceDetails {
 
-	int empID;
-	int yearOfExperience;
-	Date dateOfJoining;
-	Date dateOfLeaving;
-	String designation;
-	String companyName;
+	public int empID;
+	public int yearOfExperience;
+	public Date dateOfJoining;
+	public Date dateOfLeaving;
+	public String designation;
+	public String companyName;
+	
 	public PostExperienceDetails(int empID, int yearOfExperience, Date dateOfJoining, Date dateOfLeaving,
 			String designation, String companyName) {
 		super();

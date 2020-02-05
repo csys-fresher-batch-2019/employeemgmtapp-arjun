@@ -1,8 +1,11 @@
 package HRMS.EmployeerDetails;
 
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Scanner;
 
+import HRMS.PostExperienceDetails.PostExperienceDetails;
+import HRMS.PostExperienceDetails.PostExperienceDetailsDAOImp;
 import HRMS.PostExperienceDetails.TestPostExperienceDetails;
 
 public class TestaddEmployeerDetails {
@@ -55,11 +58,29 @@ public class TestaddEmployeerDetails {
 		b.dateOfJoining=date1;
 		b.experience=experience;
 		c.addEmp(b);
-		if(b.experience.equalsIgnoreCase("Y"))
+		/*if(b.experience.equalsIgnoreCase("Y"))
 		{
-			TestPostExperienceDetails.main();
+			PostExperienceDetailsDAOImp imp=new PostExperienceDetailsDAOImp();
+			PostExperienceDetails model=new PostExperienceDetails();
+			System.out.println("Enter empId,yearOfExperience,dateOfJoining,dateOfLeaving,designation,companyName : ");
+			model.empID=sc.nextInt();
+			model.yearOfExperience=sc.nextInt();
+			String JoiningDate=sc.next();
+			LocalDate dat=LocalDate.parse(JoiningDate);
+			Date dates = java.sql.Date.valueOf(dat);
+			model.dateOfJoining=dates;
+			String dateOfLeaving=sc.next();
+			LocalDate dat1=LocalDate.parse(dateOfLeaving);
+			Date datess = java.sql.Date.valueOf(dat1);
+			model.dateOfLeaving=datess;
+			model.designation=sc.next();
+			model.companyName=sc.next();
+			
+			imp.addPostExperience(model);
+		
+		 
+		 */
 		}
 			
 	
 	}
-}
