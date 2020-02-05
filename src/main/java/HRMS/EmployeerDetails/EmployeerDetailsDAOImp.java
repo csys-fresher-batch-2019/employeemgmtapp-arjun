@@ -11,7 +11,7 @@ public class EmployeerDetailsDAOImp implements EmployeerDetailsDAO {
 	public void addEmp(EmployeerDetails a) throws Exception {
 		Connection com=TestConnection.getConnection();
 		
-		String sql="insert into employeer_details values(?,?,?,?,?,?,?,?,?,?,?)";
+		String sql="insert into employeer_details(emp_id,emp_name,gender,email,mobile,city,branch_of_Study,year_of_graduation,dob,date_of_joining,experience) values(?,?,?,?,?,?,?,?,?,?,?)";
 		PreparedStatement ps=com.prepareStatement(sql);
 		System.out.println(sql);
 

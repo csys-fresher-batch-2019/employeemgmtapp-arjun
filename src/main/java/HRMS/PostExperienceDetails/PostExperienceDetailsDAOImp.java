@@ -57,10 +57,10 @@ public class PostExperienceDetailsDAOImp implements PostExperienceDetailsDAO{
 
 		ps.setInt(1,a.empID);
 		ps.setInt(2,a.yearOfExperience);
-		java.sql.Date date=java.sql.Date.valueOf(a.dateOfJoining);
-		ps.setDate(3,date);                 //receiving
-		java.sql.Date date2=java.sql.Date.valueOf(a.dateOfLeaving);
-		ps.setDate(4,date2);
+		//java.sql.Date date=java.sql.Date.valueOf(a.dateOfJoining);
+		ps.setDate(3,a.dateOfJoining);                 //receiving
+		//java.sql.Date date2=java.sql.Date.valueOf(a.dateOfLeaving);
+		ps.setDate(4,a.dateOfLeaving);
 		ps.setString(5,a.designation);
 		ps.setString(6, a.companyName);
 		

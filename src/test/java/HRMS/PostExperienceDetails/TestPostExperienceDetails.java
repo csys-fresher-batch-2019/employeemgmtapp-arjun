@@ -1,5 +1,6 @@
 package HRMS.PostExperienceDetails;
 
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -18,9 +19,11 @@ public class TestPostExperienceDetails {
 		System.out.println("Enter JoiningDate :(YYYY-MM-DD)");
 		String dateOfJoining=sc.next();
 		LocalDate date=LocalDate.parse(dateOfJoining);
+		Date dates = java.sql.Date.valueOf(date);
 		System.out.println("Enter LeavingDate :(YYYY-MM-DD)");
 		String dateOfLeaving=sc.next();
 		LocalDate date2=LocalDate.parse(dateOfLeaving);
+		Date dates1 = java.sql.Date.valueOf(date2);
 		System.out.println("Enter Designation :(Example:Java Developer)");	
 		String designation=sc.next();
 		System.out.println("Enter CompanyName :(Example:Chainsys)");
@@ -28,8 +31,8 @@ public class TestPostExperienceDetails {
 		
 		b.empID=empID;
 		b.yearOfExperience=yearOfExperience;
-		b.dateOfJoining=date;
-		b.dateOfLeaving=date2;
+		b.dateOfJoining=dates;
+		b.dateOfLeaving=dates1;
 		b.designation=designation;
 		b.companyName=companyName;
 		

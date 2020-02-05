@@ -7,11 +7,11 @@ public class PostExperienceDetails {
 
 	int empID;
 	int yearOfExperience;
-	LocalDate dateOfJoining;
-	LocalDate dateOfLeaving;
+	Date dateOfJoining;
+	Date dateOfLeaving;
 	String designation;
 	String companyName;
-	public PostExperienceDetails(int empID, int yearOfExperience, LocalDate dateOfJoining, LocalDate dateOfLeaving,
+	public PostExperienceDetails(int empID, int yearOfExperience, Date dateOfJoining, Date dateOfLeaving,
 			String designation, String companyName) {
 		super();
 		this.empID = empID;
