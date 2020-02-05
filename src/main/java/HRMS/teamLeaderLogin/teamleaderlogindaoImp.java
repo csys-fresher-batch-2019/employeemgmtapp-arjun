@@ -7,9 +7,6 @@ import java.util.List;
 import java.util.Scanner;
 
 import HRMS.EmployeerDetails.TestConnection;
-import HRMS.TestInsertEmployeePerformance.TestEmployeePerformance;
-import HRMS.employeePerformance.employeePerformance;
-import HRMS.employeePerformance.employeePerformanceDAOImp;
 
 public class teamleaderlogindaoImp implements TeamLeaderLoginDAO {
 
