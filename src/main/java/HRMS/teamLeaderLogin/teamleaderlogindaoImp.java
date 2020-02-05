@@ -26,7 +26,7 @@ public class teamleaderlogindaoImp implements TeamLeaderLoginDAO {
 			String pass = rs.getString("team_password");
 			if (pass.equals(password)) {
 				System.out.println("Login success");
-				TestEmployeePerformance.main();
+//				TestEmployeePerformance.main();
 			} else {
 				System.out.println("Login failed");
 			}
