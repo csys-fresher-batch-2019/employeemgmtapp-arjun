@@ -16,10 +16,10 @@ public class TestCall {
 		System.out.println("Enter 1 : Different Team with Same Role  :");
 		System.out.println("Enter 1 : Different Team with Different Role :");
 		System.out.println("Enter 2 : Job Resign :");
-		System.out.println("Enter 3 : Same Team with Different Role for 2nd employee :");
+	/*	System.out.println("Enter 3 : Same Team with Different Role for 2nd employee :");
 		System.out.println("Enter 3 : Different Team with Same Role for 2nd employee :");
 		System.out.println("Enter 3 : Different Team with Different Role for 2nd employee :");
-		System.out.println("Enter 4 : Job Resign for 2nd employee");
+		System.out.println("Enter 4 : Job Resign for 2nd employee");*/
 		
 		Scanner sc=new Scanner(System.in);
 		int	check = sc.nextInt();
@@ -86,7 +86,7 @@ public class TestCall {
 				TeamRoleWorkDAOImp c=new TeamRoleWorkDAOImp();
 				TeamRoleWork b=new TeamRoleWork();
 				
-				//System.out.println("Same Team With Different Role :");
+				//JobResignOfIndividual
 				System.out.println("Enter teamID :(Example:4)");
 				b.teamId=sc.nextInt();
 				System.out.println("Enter empId :(Example:4)");
