@@ -58,7 +58,7 @@ public class TestaddEmployeerDetails {
 		b.dateOfJoining=date1;
 		b.experience=experience;
 		c.addEmp(b);
-		/*if(b.experience.equalsIgnoreCase("Y"))
+		if(b.experience.equalsIgnoreCase("Y"))
 		{
 			PostExperienceDetailsDAOImp imp=new PostExperienceDetailsDAOImp();
 			PostExperienceDetails model=new PostExperienceDetails();
@@ -79,8 +79,9 @@ public class TestaddEmployeerDetails {
 			imp.addPostExperience(model);
 		
 		 
-		 */
+		 
 		}
 			
 	
 	}
+}
