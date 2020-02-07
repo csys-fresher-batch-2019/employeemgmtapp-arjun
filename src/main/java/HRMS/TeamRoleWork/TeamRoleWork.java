@@ -5,26 +5,21 @@ public class TeamRoleWork {
 
 	int teamId;
 	int empId;
-	String empRole;
+	String oldEmpRole;
+	String newEmpRole;
 	LocalDate teamJoinedDate;
 	LocalDate teamExitDate;
-	public TeamRoleWork(int teamId, int empId,String empRole,LocalDate teamJoinedDate, LocalDate teamExitDate) {
-		super();
-		this.teamId = teamId;
-		this.empId = empId;
-		this.empRole = empRole;
-		this.teamJoinedDate = teamJoinedDate;
-		this.teamExitDate = teamExitDate;
-	}
+
 	public TeamRoleWork() {
 		super();
 	}
+
 	@Override
 	public String toString() {
-		return "TeamRoleWork [teamId=" + teamId + ", empId=" + empId + ", empRole=" + empRole + ", teamJoinedDate="
-				+ teamJoinedDate + ", teamExitDate=" + teamExitDate + "]";
+		return "TeamRoleWork [teamId=" + teamId + ", empId=" + empId + ", oldEmpRole=" + oldEmpRole + ", newEmpRole="
+				+ newEmpRole + ", teamJoinedDate=" + teamJoinedDate + ", teamExitDate=" + teamExitDate + "]";
 	}
-	
+
 	
 }
 

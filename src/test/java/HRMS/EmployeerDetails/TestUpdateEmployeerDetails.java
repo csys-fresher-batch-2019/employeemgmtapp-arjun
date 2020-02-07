@@ -13,17 +13,17 @@ public static void main(String[] args) throws Exception {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter empId :");
 		int empId=sc.nextInt();
-		System.out.println("Enter empName :");
-		String empName=sc.next();
-		System.out.println("Enter gender :");
-		String gender=sc.next();
-		System.out.println("Enter experience :");
-		String experience=sc.next();
+		System.out.println("Enter email :");
+		String email=sc.next();
+		System.out.println("Enter mobile :");
+		Long mobile=sc.nextLong();
+		System.out.println("Enter city :");
+		String city=sc.next();
 		//object.table1name=table4presentname;
 		b.empId=empId;
-		b.empName=empName;
-		b.gender=gender;
-		b.experience=experience;
+		b.email=email;
+		b.mobile=mobile;
+		b.city=city;
 	
 	
 	c.updateEmp(b);

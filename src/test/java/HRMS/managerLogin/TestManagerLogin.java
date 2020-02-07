@@ -15,7 +15,6 @@ public class TestManagerLogin {
 		String pass=sc.next();
 		managerLoginDAOImp o=new managerLoginDAOImp();
 		o.managerLogin(empId,pass);
-		System.out.println("Method Calling");
 	}
 
 }

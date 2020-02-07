@@ -6,7 +6,7 @@ public interface TeamRoleWorkDAO {
 
 	void addNewToTeam(TeamRoleWork t) throws Exception;
 	
-	void addSameTeamWithDifferentRole(TeamRoleWork t) throws Exception;
+	void addSameTeamWithDifferentRole(TeamRoleWork t,int newTeamId) throws Exception;
 	
 	void addJobResignOfIndividual(TeamRoleWork t) throws Exception;
 

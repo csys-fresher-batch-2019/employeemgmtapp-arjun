@@ -17,7 +17,7 @@ public class EmployeerDetailsDAOImp implements EmployeerDetailsDAO {
 
 		ps.setInt(1,a.empId);
 		ps.setString(2,a.empName);
-		ps.setString(3,a.gender);                                               //receiving
+		ps.setString(3,a.gender);                          //receiving
 		ps.setString(4,a.email);
 		ps.setLong(5,a.mobile);
 		ps.setString(6, a.city);
@@ -35,13 +35,13 @@ public class EmployeerDetailsDAOImp implements EmployeerDetailsDAO {
 	}
 	public void updateEmp(EmployeerDetails a) throws Exception {
 		Connection com=TestConnection.getConnection();		
-		String sql="update employeer_details set  experience=?,gender=?,emp_name=? where emp_id=?";
+		String sql="update employee_details set city=?,mobile=?,email=? where emp_id=?";
 		PreparedStatement ps=com.prepareStatement(sql);
 		System.out.println(sql);
 		ps.setInt(4,a.empId);
-		ps.setString(3,a.empName);
-		ps.setString(2,a.gender);
-		ps.setString(1,a.experience);		
+		ps.setString(3,a.email);
+		ps.setLong(2,a.mobile);
+		ps.setString(1,a.city);		
 		int row=ps.executeUpdate();
 		System.out.println(row);
 	}
@@ -50,7 +50,7 @@ public class EmployeerDetailsDAOImp implements EmployeerDetailsDAO {
 	public ArrayList<EmployeerDetails> selectEmp() throws Exception {
 		// TODO Auto-generated method stub
 		Connection com=TestConnection.getConnection();
-		String sql="select * from Employeer_Details";
+		String sql="select * from employee_details";
 		PreparedStatement ps=com.prepareStatement(sql);
 		System.out.println(sql);
 		ResultSet rs= ps.executeQuery();
@@ -63,7 +63,11 @@ public class EmployeerDetailsDAOImp implements EmployeerDetailsDAO {
 			b.empId=rs.getInt("emp_id");
 			b.empName=rs.getString("emp_name");
 			b.gender=rs.getString("gender");
+			b.email=rs.getString("email");
+			b.mobile=rs.getLong("mobile");
 			b.city=rs.getString("city");
+			b.branchOfStudy=rs.getString("branch_of_study");
+			b.yearOfGraduation=rs.getInt("year_of_graduation");
 			b.experience=rs.getString("experience");
 		list.add(b);
 		}
@@ -72,45 +76,7 @@ public class EmployeerDetailsDAOImp implements EmployeerDetailsDAO {
 		}
 		return list;
 	}	
-	/*public ArrayList<EmployeerDetails> selectOneEmp(int employeeId) throws Exception {
-		// TODO Auto-generated method stub
-		Connection com=TestConnection.getConnection();
-		String sql="select * from Employeer_Details where empId = ?";
-		PreparedStatement ps=com.prepareStatement(sql);
-		ps.setInt(1, employeeId);
-		System.out.println(sql);
-		ResultSet rs= ps.executeQuery();
-		ArrayList<EmployeerDetails> list = new ArrayList<EmployeerDetails>();
-		
-		while(rs.next())
-		{
-			EmployeerDetails a=new EmployeerDetails();
-		//object.name_in_java=selectQueryobject.get(sql name);
-			a.empId=rs.getInt("emp_id");
-			a.empName=rs.getString("emp_name");
-			a.gender=rs.getString("gender");
-			a.city=rs.getString("city");
-			
 	
-		list.add(a);
-		}
-		for (EmployeerDetails employeerDetail : list) {
-			System.out.println(employeerDetail);
-		}
-		return list;
-		
-		
-	}*/
-	
-	/*public void deleteEmp(String empName) throws Exception {
-	Connection com=TestConnection.getConnection();		
-	String sql="delete from employeer_details where emp_name=?";
-	PreparedStatement ps=com.prepareStatement(sql);
-	System.out.println(sql);
-	ps.setString(1,empName);		
-	int row=ps.executeUpdate();
-	System.out.println(row);
-}*/
 
 
 }

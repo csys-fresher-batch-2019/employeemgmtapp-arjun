@@ -3,7 +3,6 @@ package HRMS.PostExperienceDetails;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 import HRMS.EmployeerDetails.TestConnection;
@@ -16,7 +15,7 @@ public class PostExperienceDetailsDAOImp implements PostExperienceDetailsDAO{
 		Connection com=TestConnection.getConnection();
 		String sql="select * from post_experience_details where emp_id = ?";
 		PreparedStatement ps=com.prepareStatement(sql);
-		//ps.setInt(1, employeeId);
+		ps.setInt(1, employeeId);
 		System.out.println(sql);
 		ResultSet rs= ps.executeQuery();
 		ArrayList<PostExperienceDetails> list = new ArrayList<PostExperienceDetails>();
@@ -27,8 +26,9 @@ public class PostExperienceDetailsDAOImp implements PostExperienceDetailsDAO{
 		//object.name_in_java=selectQueryobject.get(sql name);
 			a.empID=rs.getInt("emp_id");
 			a.yearOfExperience=rs.getInt("year_of_experience");
-			java.sql.Date date1=java.sql.Date.valueOf("date_of_joining");		
 			a.dateOfJoining=rs.getDate("date_of_joining");
+			//java.sql.Date date1=java.sql.Date.valueOf("date_of_joining");		
+			//a.dateOfJoining = LocalDate.parse(d);
 			a.dateOfLeaving=rs.getDate("date_of_leaving");
 			a.designation=rs.getString("designation");
 			a.companyName=rs.getString("company_name");
