@@ -32,18 +32,18 @@ public class TestCall {
 			TeamRoleWork b=new TeamRoleWork();
 			System.out.println("New to a team(Fresher) :");
 			System.out.println("Enter teamID :(Example:4)");
-			b.teamId=sc.nextInt();
+			b.setTeamId(sc.nextInt());
 			System.out.println("Enter empId :(Example:4)");
-			b.empId=sc.nextInt();
+			b.setEmpId(sc.nextInt());
 			System.out.println("Enter empRole :(Example:newRole)");
-			b.newEmpRole=sc.next();
-			if(b.newEmpRole.equalsIgnoreCase("newRole")) {
+			b.setNewEmpRole(sc.next());
+			if(b.getNewEmpRole().equalsIgnoreCase("newRole")) {
 				System.out.println("Enter NewEmpRole : ");
-				b.newEmpRole=sc.next();
+				b.setNewEmpRole(sc.next());
 			}
-			b.teamJoinedDate=LocalDate.now();
-			System.out.println(b.teamJoinedDate);
-			System.out.println("Enter teamJoinedDate :(YYYY-MM-DD)"+b.teamJoinedDate);
+			b.setTeamJoinedDate(LocalDate.now());
+			System.out.println(b.getTeamJoinedDate());
+			System.out.println("Enter teamJoinedDate :(YYYY-MM-DD)"+b.getTeamJoinedDate());
 			obj.addNewToTeam(b);
 			break;
 	}
@@ -58,27 +58,27 @@ public class TestCall {
 				System.out.println("Enter teamExitDate :(YYYY-MM-DD)");
 				String teamExitDate=sc.next();
 				LocalDate date=LocalDate.parse(teamExitDate);
-				b.teamExitDate=date;
+				b.setTeamExitDate(date);
 				System.out.println("Enter empId :(Example:4)");
-				b.empId=sc.nextInt();
+				b.setEmpId(sc.nextInt());
 				System.out.println("Enter empRole :(Example:sameRole)");
-				b.oldEmpRole=sc.next();
-				if(b.oldEmpRole.equalsIgnoreCase("oldRole"))
+				b.setOldEmpRole(sc.next());
+				if(b.getOldEmpRole().equalsIgnoreCase("oldRole"))
 				{
 					System.out.println("Enter old EmpRole : ");	
-					b.oldEmpRole=sc.next();
+					b.setOldEmpRole(sc.next());
 				}
 				System.out.println("Enter teamID :(Example:4)");
-				b.teamId=sc.nextInt();
+				b.setTeamId(sc.nextInt());
 				System.out.println("Enter empRole :(Example:newRole)");
-				b.newEmpRole=sc.next();
-				if(b.newEmpRole.equalsIgnoreCase("newRole")) {
+				b.setNewEmpRole(sc.next());
+				if(b.getNewEmpRole().equalsIgnoreCase("newRole")) {
 					System.out.println("Enter NewEmpRole : ");
-					b.newEmpRole=sc.next();
+					b.setNewEmpRole(sc.next());
 				}
-				b.teamJoinedDate=LocalDate.now();
-				System.out.println(b.teamJoinedDate);
-				System.out.println("Enter teamJoinedDate :(YYYY-MM-DD)"+b.teamJoinedDate);
+				b.setTeamJoinedDate(LocalDate.now());
+				System.out.println(b.getTeamJoinedDate());
+				System.out.println("Enter teamJoinedDate :(YYYY-MM-DD)"+b.getTeamJoinedDate());
 				System.out.println("Press Y if person shift to new team");
 				String val = sc.next();
 				int newid = 0;
@@ -100,17 +100,17 @@ public class TestCall {
 				System.out.println("Enter teamExitDate :(YYYY-MM-DD)");
 				String teamExitDate=sc.next();
 				LocalDate date=LocalDate.parse(teamExitDate);
-				b.teamExitDate=date;
+				b.setTeamExitDate(date);
 				System.out.println("Enter teamID :(Example:4)");
-				b.teamId=sc.nextInt();
+				b.setTeamId(sc.nextInt());
 				System.out.println("Enter empId :(Example:4)");
-				b.empId=sc.nextInt();
+				b.setEmpId(sc.nextInt());
 				System.out.println("Enter empRole :(Example:sameRole)");
-				b.oldEmpRole=sc.next();
-				if(b.oldEmpRole.equalsIgnoreCase("sameRole")) 
+				b.setOldEmpRole(sc.next());
+				if(b.getOldEmpRole().equalsIgnoreCase("sameRole")) 
 				{
 					System.out.println("Enter old EmpRole : ");	
-					b.oldEmpRole=sc.next();
+					b.setOldEmpRole(sc.next());
 				}
 				
 				c.addJobResignOfIndividual(b);

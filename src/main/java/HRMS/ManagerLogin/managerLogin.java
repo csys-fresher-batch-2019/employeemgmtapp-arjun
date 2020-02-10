@@ -2,6 +2,19 @@ package HRMS.ManagerLogin;
 
 public class managerLogin {
 
-	int empId;
-	String password;
+	private int empId;
+	private String password;
+	
+	public int getEmpId() {
+		return empId;
+	}
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }

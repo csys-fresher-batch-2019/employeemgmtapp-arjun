@@ -7,14 +7,17 @@ import java.util.ArrayList;
 
 import HRMS.EmployeerDetails.EmployeerDetails;
 import HRMS.EmployeerDetails.TestConnection;
+import HRMS.util.DBException;
+import HRMS.util.ErrorMessages;
 
 public class HrViewDAOImp implements HrViewDAO{
 
 	public ArrayList<HrView> selectHrView() throws Exception {
 		
-		Connection com=TestConnection.getConnection();
 		String sql="select * from HR_view";
-		PreparedStatement ps=com.prepareStatement(sql);
+		
+		try(Connection com=TestConnection.getConnection();){
+		try(PreparedStatement ps=com.prepareStatement(sql);){
 		System.out.println(sql);
 		ResultSet rs= ps.executeQuery();
 		ArrayList<HrView> list = new ArrayList<HrView>();
@@ -23,12 +26,12 @@ public class HrViewDAOImp implements HrViewDAO{
 		{
 			HrView b=new HrView();
 		//object.name_in_java=selectQueryobject.get(sql name);
-			b.empId=rs.getInt("emp_id");
-			b.teamId=rs.getInt("team_id");
-			b.empRole=rs.getString("emp_role");
-			b.performanceRating=rs.getInt("performance_rating");
-			b.approval=rs.getString("approval");
-			b.reasons=rs.getString("reasons");
+			b.setEmpId(rs.getInt("emp_id"));
+			b.setTeamId(rs.getInt("team_id"));
+			b.setEmpRole(rs.getString("emp_role"));
+			b.setPerformanceRating(rs.getInt("performance_rating"));
+			b.setApproval(rs.getString("approval"));
+			b.setReasons(rs.getString("reasons"));
 		list.add(b);
 		}
 		for (HrView hrView : list) {
@@ -37,6 +40,14 @@ public class HrViewDAOImp implements HrViewDAO{
 		return list;
 		
 	}
-
-	
+		catch(Exception e) {
+			throw new DBException(ErrorMessages.PREPARE_FAILURE);
+		}
+		}
+		catch(Exception e) {
+			throw new DBException(ErrorMessages.CONNECTION_FAILURE);
+		}
+	}
 }
+	
+

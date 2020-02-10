@@ -14,13 +14,13 @@ public class TestEmployeePerformance {
 		
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter EmpId : ");
-		b.empId=sc.nextInt();
+		b.setEmpId(sc.nextInt());
 		System.out.println("Enter TeamId : ");
-		b.teamId=sc.nextInt();
+		b.setTeamId(sc.nextInt());
 		System.out.println("Enter AppraisalCode : ");
-		b.appraisalCode=sc.next();
+		b.setAppraisalCode(sc.next());
 		System.out.println("Enter PerformanceRating : ");
-		b.performanceRating=sc.nextInt();
+		b.setPerformanceRating(sc.nextInt());
 		
 		c.add(b);
 	

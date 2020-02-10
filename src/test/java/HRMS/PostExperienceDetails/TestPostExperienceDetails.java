@@ -29,12 +29,12 @@ public class TestPostExperienceDetails {
 		System.out.println("Enter CompanyName :(Example:Chainsys)");
 		String companyName=sc.next();
 		
-		b.empID=empID;
-		b.yearOfExperience=yearOfExperience;
-		b.dateOfJoining=dates;
-		b.dateOfLeaving=dates1;
-		b.designation=designation;
-		b.companyName=companyName;
+		b.setEmpID(empID);
+		b.setYearOfExperience(yearOfExperience);
+		b.setDateOfJoining(dates);
+		b.setDateOfLeaving(dates1);
+		b.setDesignation(designation);
+		b.setCompanyName(companyName);
 		
 		c.addPostExperience(b);
 		

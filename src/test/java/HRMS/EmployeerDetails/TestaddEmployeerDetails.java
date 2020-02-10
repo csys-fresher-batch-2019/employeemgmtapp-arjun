@@ -18,6 +18,7 @@ public class TestaddEmployeerDetails {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter EmpID :(Example:4)");
 		int empId=sc.nextInt();
+		//b.setEmpId(empId);
 		System.out.println("Enter EmpName :(Example:Arjun Kumar A E)");
 		String empName=sc.next();
 		System.out.println("Enter Gender :(M/F/Others)");
@@ -46,35 +47,35 @@ public class TestaddEmployeerDetails {
 		System.out.println("Enter Whether Experienced Person or Not :(Y/N)");
 		String experience=sc.next();
 		//object.table1name=table4presentname;                 //passing(or data giving)
-		b.empId=empId;
-		b.empName=empName;
-		b.gender=gender;
-		b.email=email;
-		b.mobile=mobile;
-		b.city=city;
-		b.branchOfStudy=branchOfStudy;
-		b.yearOfGraduation=yearOfGraduation;
-		b.dob=date;
-		b.dateOfJoining=date1;
-		b.experience=experience;
+		b.setEmpId(empId);
+		b.setEmpName(empName);
+		b.setGender(gender);
+		b.setEmail(email);
+		b.setMobile(mobile);
+		b.setCity(city);
+		b.setBranchOfStudy(branchOfStudy);
+		b.setYearOfGraduation(yearOfGraduation);
+		b.setDob(date);
+		b.setDateOfJoining(date1);
+		b.setExperience(experience);
 		c.addEmp(b);
-		if(b.experience.equalsIgnoreCase("Y"))
+		if(b.getExperience().equalsIgnoreCase("Y"))
 		{
 			PostExperienceDetailsDAOImp imp=new PostExperienceDetailsDAOImp();
 			PostExperienceDetails model=new PostExperienceDetails();
 			System.out.println("Enter empId,yearOfExperience,dateOfJoining,dateOfLeaving,designation,companyName : ");
-			model.empID=sc.nextInt();
-			model.yearOfExperience=sc.nextInt();
+			model.setEmpID(sc.nextInt());
+			model.setYearOfExperience(sc.nextInt());
 			String JoiningDate=sc.next();
 			LocalDate dat=LocalDate.parse(JoiningDate);
 			Date dates = java.sql.Date.valueOf(dat);
-			model.dateOfJoining=dates;
+			model.setDateOfJoining(dates);
 			String dateOfLeaving=sc.next();
 			LocalDate dat1=LocalDate.parse(dateOfLeaving);
 			Date datess = java.sql.Date.valueOf(dat1);
-			model.dateOfLeaving=datess;
-			model.designation=sc.next();
-			model.companyName=sc.next();
+			model.setDateOfLeaving(datess);
+			model.setDesignation(sc.next());
+			model.setCompanyName(sc.next());
 			
 			imp.addPostExperience(model);
 		

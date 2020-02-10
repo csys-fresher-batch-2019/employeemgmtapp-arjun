@@ -3,12 +3,60 @@ import java.time.LocalDate;
 
 public class TeamRoleWork {
 
-	int teamId;
-	int empId;
-	String oldEmpRole;
-	String newEmpRole;
-	LocalDate teamJoinedDate;
-	LocalDate teamExitDate;
+	private int teamId;
+	private int empId;
+	private String oldEmpRole;
+	private String newEmpRole;
+	private LocalDate teamJoinedDate;
+	private LocalDate teamExitDate;
+	
+	public int getTeamId() {
+		return teamId;
+	}
+
+	public void setTeamId(int teamId) {
+		this.teamId = teamId;
+	}
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+
+	public String getOldEmpRole() {
+		return oldEmpRole;
+	}
+
+	public void setOldEmpRole(String oldEmpRole) {
+		this.oldEmpRole = oldEmpRole;
+	}
+
+	public String getNewEmpRole() {
+		return newEmpRole;
+	}
+
+	public void setNewEmpRole(String newEmpRole) {
+		this.newEmpRole = newEmpRole;
+	}
+
+	public LocalDate getTeamJoinedDate() {
+		return teamJoinedDate;
+	}
+
+	public void setTeamJoinedDate(LocalDate teamJoinedDate) {
+		this.teamJoinedDate = teamJoinedDate;
+	}
+
+	public LocalDate getTeamExitDate() {
+		return teamExitDate;
+	}
+
+	public void setTeamExitDate(LocalDate teamExitDate) {
+		this.teamExitDate = teamExitDate;
+	}
 
 	public TeamRoleWork() {
 		super();

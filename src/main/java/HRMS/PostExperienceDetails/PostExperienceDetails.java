@@ -5,12 +5,61 @@ import java.time.LocalDate;
 
 public class PostExperienceDetails {
 
-	public int empID;
-	public int yearOfExperience;
-	public Date dateOfJoining;
-	public Date dateOfLeaving;
-	public String designation;
-	public String companyName;
+	private int empID;
+	private int yearOfExperience;
+	private Date dateOfJoining;
+	private Date dateOfLeaving;
+	private String designation;
+	private String companyName;
+	
+	public int getEmpID() {
+		return empID;
+	}
+
+	public void setEmpID(int empID) {
+		this.empID = empID;
+	}
+
+	public int getYearOfExperience() {
+		return yearOfExperience;
+	}
+
+	public void setYearOfExperience(int yearOfExperience) {
+		this.yearOfExperience = yearOfExperience;
+	}
+
+	public Date getDateOfJoining() {
+		return dateOfJoining;
+	}
+
+	public void setDateOfJoining(Date dateOfJoining) {
+		this.dateOfJoining = dateOfJoining;
+	}
+
+	public Date getDateOfLeaving() {
+		return dateOfLeaving;
+	}
+
+	public void setDateOfLeaving(Date dateOfLeaving) {
+		this.dateOfLeaving = dateOfLeaving;
+	}
+
+	public String getDesignation() {
+		return designation;
+	}
+
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+
 	
 	public PostExperienceDetails(int empID, int yearOfExperience, Date dateOfJoining, Date dateOfLeaving,
 			String designation, String companyName) {
@@ -39,13 +88,3 @@ public class PostExperienceDetails {
 	}
 
 
-/*
-emp_id number not null,
-year_of_experience number not null,
-date_of_joining timestamp,
-date_of_leaving timestamp,
-designation varchar2(25) not null,
-company_name varchar2(25) not null,
-constraint empl_id_fk foreign key(emp_id) references employeer_details(emp_id)
-
-*/

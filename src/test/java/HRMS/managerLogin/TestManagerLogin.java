@@ -16,5 +16,4 @@ public class TestManagerLogin {
 		managerLoginDAOImp o=new managerLoginDAOImp();
 		o.managerLogin(empId,pass);
 	}
-
 }

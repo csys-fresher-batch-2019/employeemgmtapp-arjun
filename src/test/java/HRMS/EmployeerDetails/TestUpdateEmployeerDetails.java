@@ -20,10 +20,10 @@ public static void main(String[] args) throws Exception {
 		System.out.println("Enter city :");
 		String city=sc.next();
 		//object.table1name=table4presentname;
-		b.empId=empId;
-		b.email=email;
-		b.mobile=mobile;
-		b.city=city;
+		b.setEmpId(empId);
+		b.setEmail(email);
+		b.setMobile(mobile);
+		b.setCity(city);
 	
 	
 	c.updateEmp(b);
